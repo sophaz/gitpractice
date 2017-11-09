@@ -1,1 +1,2 @@
-# gitpractice
+# gitpractice.
+I'm typing
