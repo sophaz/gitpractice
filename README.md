@@ -7,5 +7,3 @@ AhhhhhHHh my my
 Ora ora ora...
 
 
-MEOW
-
