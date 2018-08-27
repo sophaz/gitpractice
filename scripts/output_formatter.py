@@ -4,7 +4,7 @@ with open("input.txt", "r+") as f:
     lines = f.readlines()
 
     # Create a new file to write messsages to
-    with open("output.txt", "r+") as output:
+    with open("output.txt", "w") as output:
         # Wipe whatever was previously in this file, if any
         output.truncate()
 
