@@ -13,7 +13,10 @@ jobs:
     steps:
       - checkout
 
-      # Install CocoaPods
+      - run:
+          name: Install Swiftlint
+          command: brew install swiftlint
+
       - run:
           name: Run Swiftlint
           command: swiftlint
