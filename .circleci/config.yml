@@ -16,7 +16,7 @@ jobs:
           name: Post to Github
           command: |
             if [[ true ]]; then
-              curl -H "Authorization: bearer 9c8af70d715e7ea795000b96ee89cd10442ab0dc" -X POST -d " \
+              curl -H "Authorization: bearer 8d661f636b13659f705661607ad7d348b59c34ad" -X POST -d " \
               { \
                 \"query\": \"mutation { addComment(input:{clientMutationId: \"1234\", subjectId: \"MDExOlB1bGxSZXF1ZXN0MjE2MTUwMzk4\", body: \"Looks good to me again from CircleCI\"}) { clientMutationId commentEdge {node {body      }}}}\" \
               } \
