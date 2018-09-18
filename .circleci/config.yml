@@ -14,6 +14,10 @@ jobs:
       - checkout
 
       - run:
+          name: Update Brew 
+          command: brew update
+
+      - run:
           name: Install Swiftlint
           command: brew install swiftlint
 
