@@ -13,6 +13,10 @@ jobs:
     steps:
       - checkout
       - run:
+         name: Run Some Python
+         command: python test.py
+
+      - run:
           name: Post to Github
           command: |
             if [[ true ]]; then
