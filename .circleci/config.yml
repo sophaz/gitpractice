@@ -23,7 +23,7 @@ jobs:
       
       - run:
           name: GET to Github
-          command: curl -X POST  https://api.github.com/graphql -H 'Authorization: bearer ${CIRCLE_API_PROJECT_TOKEN}' -d '{"query": "query { repository(owner:\"octocat\", name:\"Hello-World\") { id } }"}'
+          command: bash get_comment.sh
       
       - run:
          name: token
