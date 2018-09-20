@@ -3,6 +3,7 @@ class Profile: Object, FetchOrCreatable {
     typealias T = Profile
 
     @NSManaged var name: String
+    new file.
     @NSManaged var streetAddress: String
     @NSManaged var city: String
     @NSManaged var likedShops: Set<Shop>?
