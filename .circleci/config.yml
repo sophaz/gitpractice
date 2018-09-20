@@ -20,11 +20,7 @@ jobs:
           name: Post to Github
           command: |
             if [[ true ]]; then
-              curl -X POST \
-              https://api.github.com/graphql \
-              -H 'Authorization: bearer aa7122768cc453b85ccacc1f6b697fe7f5e4dfa0' \
-              -H 'Content-Type: application/json' \
-              -d '{"query": "mutation { addComment(input:{clientMutationId: \"1234\", subjectId: \"MDExOlB1bGxSZXF1ZXN0MjE2MTUwMzk4\", body: \"Looks good to me again from CircleCI\"}) { clientMutationId commentEdge {node {body      }}}}" }'
+              curl -X POST -u sophaz:2a85bca62cc997297a10378c546cc7c672d69864 https://api.github.com/graphql -d '{ "query": "mutation { addComment(input:{clientMutationId: \"1234\", subjectId: \"MDExOlB1bGxSZXF1ZXN0MjE2MTUwMzk4\", body: \"Looks good to me again from CircleCI\"}) { clientMutationId commentEdge {node {body      }}}}"}'
             fi
 
       - run:
