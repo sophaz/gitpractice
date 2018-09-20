@@ -22,11 +22,9 @@ jobs:
             if [[ true ]]; then
               curl -X POST \
               https://api.github.com/graphql \
-              -H 'Authorization: bearer fc6cdac4a59c02aa1b2580e9d0620345184d178d' \
+              -H 'Authorization: bearer aa7122768cc453b85ccacc1f6b697fe7f5e4dfa0' \
               -H 'Content-Type: application/json' \
-              -d '{
-                \"query\": \"mutation { addComment(input:{clientMutationId: \"1234\", subjectId: \"MDExOlB1bGxSZXF1ZXN0MjE2MTUwMzk4\", body: \"Looks good to me again from CircleCI\"}) { clientMutationId commentEdge {node {body      }}}}\"
-              }'
+              -d '{"query": "mutation { addComment(input:{clientMutationId: \"1234\", subjectId: \"MDExOlB1bGxSZXF1ZXN0MjE2MTUwMzk4\", body: \"Looks good to me again from CircleCI\"}) { clientMutationId commentEdge {node {body      }}}}" }'
             fi
 
       - run:
