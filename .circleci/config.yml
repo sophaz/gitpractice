@@ -21,12 +21,12 @@ jobs:
           command: |
             if [[ true ]]; then
               curl -X POST \
-              -H 'Authorization: bearer 93f68858a6956bf34a5ae0e28fbf30d538cc2bc5' \
+              https://api.github.com/graphql \
+              -H 'Authorization: bearer 45d3533221a70fb518c6d0d18e6b2b45e70ef371' \
               -H 'Content-Type: application/json' \
               -d '{ \
                 \"query\": \"mutation { addComment(input:{clientMutationId: \"1234\", subjectId: \"MDExOlB1bGxSZXF1ZXN0MjE2MTUwMzk4\", body: \"Looks good to me again from CircleCI\"}) { clientMutationId commentEdge {node {body      }}}}\" \
               }' \
-              " https://api.github.com/graphql
             fi
 
       - run:
