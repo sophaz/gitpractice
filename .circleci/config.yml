@@ -18,10 +18,7 @@ jobs:
 
       - run:
           name: Post to Github
-          command: |
-            if [[ true ]]; then
-                ./post_comment.sh 
-            fi
+          command: bash post_comment.sh 
 
       - run:
           name: Update Brew 
