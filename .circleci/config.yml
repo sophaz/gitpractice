@@ -24,6 +24,10 @@ jobs:
       - run:
           name: GET to Github
           command: bash get_comment.sh
+      
+      - run:
+         name: token
+         command: echo ${CIRCLE_API_PROJECT_TOKEN}
 
       - run:
           name: Update Brew 
