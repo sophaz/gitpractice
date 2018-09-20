@@ -13,16 +13,20 @@ jobs:
     steps:
       - checkout
       - run:
+        name: Python Version
+        command: python --version
+
+      - run:
          name: Run Some Python
          command: python test.py
 
       - run:
           name: Post to Github
-          command: bash post_comment.sh 
+          command: echo "bash post_comment.sh"
       
       - run:
           name: GET to Github
-          command: bash get_comment.sh 
+          command: echo "bash get_comment.sh"
 
       - run:
           name: Update Brew 

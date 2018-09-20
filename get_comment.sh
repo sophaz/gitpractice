@@ -1,1 +1,1 @@
-curl -X POST https://api.github.com/graphql -H 'Authorization: bearer ad72383e54c7734a77a328a0d2023621e14284fe' -H 'Content-Type: application/json' -d '{"query": "query { repository(owner:\"octocat\", name:\"Hello-World\") { id } }"}'
+curl -X POST  https://api.github.com/graphql -H 'Authorization: bearer 2ac3e0d1786589fba0d90212068536514673ded5' -d '{"query": "query { repository(owner:\"octocat\", name:\"Hello-World\") { id } }"}'
