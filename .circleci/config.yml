@@ -27,7 +27,11 @@ jobs:
       
       - run:
          name: token
-         command: echo ${CIRCLE_API_PROJECT_TOKEN}
+         command: echo $CIRCLE_API_PROJECT_TOKEN
+      
+      - run:
+         name: token
+         command: echo $BASH_ENV
 
       - run:
           name: Update Brew 
