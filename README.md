@@ -5,5 +5,3 @@ oeoeo
 AhhhhhHHh my my 
 
 Ora ora ora...
-
-hello hello hello
