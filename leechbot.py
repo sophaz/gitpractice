@@ -2,9 +2,11 @@ import requests
 import json
 
 headers = {
-"Authorization": "Bearer 6a9180930feb1ad02c1d24fc4a6a9dd13f37237b", 
-"User-Agent": "allenmiao"
+"Authorization": "Bearer %s" % os.environ['CIRCLE_API_PROJECT_TOKEN'], 
+"User-Agent": "sophaz"
 }
+
+print('header is ' + headers['Authorization'])
 
 def run_query(query): 
 	request = requests.post('https://api.github.com/graphql', json={'query': query}, headers=headers)

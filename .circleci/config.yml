@@ -15,7 +15,7 @@ jobs:
       
       - run:
          name: Run Some Python
-         command: python test.py
+         command: python leechbot.py
 
       - run:
           name: Post to Github
