@@ -2,7 +2,7 @@ import requests
 import json
 
 headers = {
-"Authorization": "Bearer 18869daf36e910770773fb6da8b68d2c59c8c72a", 
+"Authorization": "Bearer 6a9180930feb1ad02c1d24fc4a6a9dd13f37237b", 
 "User-Agent": "allenmiao"
 }
 
@@ -56,7 +56,6 @@ mutation addReviewAndGetID {
 pull_request_review_id_data = run_query(add_review_get_id_mutation) 
 pull_request_review_id = pull_request_review_id_data["data"]["addPullRequestReview"]["pullRequestReview"]["id"]
 print("Created a review. The review id is " + pull_request_review_id)
-
 
 """
 Docs here:
