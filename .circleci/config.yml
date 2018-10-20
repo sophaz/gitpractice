@@ -5,8 +5,6 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/python:3.6.2-stretch-browsers
 
     # Specify the Xcode version to use
     macos:
@@ -15,11 +13,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install Python deps in a venv
+          name: Use pipenv to install dependencies
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install requests
+            sudo pip install pipenv
+            pipenv install requests
       
       - run:
          name: Run Some Python
