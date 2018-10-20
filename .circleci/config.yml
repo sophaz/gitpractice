@@ -30,6 +30,10 @@ jobs:
             - ".venv"
             - "/usr/local/bin"
             - "/usr/local/lib/python3.6/site-packages"
+      
+      - run:
+         name: Run Some Python
+         command: pipenv run "python3 leechbot.py"
 
 dependencies:
   override:
