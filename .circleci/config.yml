@@ -14,8 +14,8 @@ jobs:
       - checkout
 
       - run:
-	 name: Install dependencies
-	 command: pip install requests
+          name: Install dependencies
+          command: pip install requests
       
       - run:
          name: Run Some Python
