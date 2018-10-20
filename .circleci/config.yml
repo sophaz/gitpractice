@@ -20,7 +20,6 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install requests
-            pip install os
       
       - run:
          name: Run Some Python
