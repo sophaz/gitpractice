@@ -15,11 +15,14 @@ jobs:
 
       - run:
           name: Install dependencies
-          command: pip install requests
+          command: |
+            sudo pip install pipenv
+            pipenv install
+            pipenv install requests
       
       - run:
          name: Run Some Python
-         command: python leechbot.py
+         command: pipenv run "python leechbot.py"
 
       - run:
           name: Post to Github
