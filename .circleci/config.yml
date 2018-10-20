@@ -32,7 +32,7 @@ jobs:
             - "/usr/local/lib/python3.6/site-packages"
       
       - run:
-         name: Run Some Python
+         name: Run Leechbot
          command: pipenv run python leechbot.py
 
 dependencies:
