@@ -17,6 +17,7 @@ jobs:
           name: Install dependencies
           command: |
             sudo pip install requests
+            sudo pip install os
       
       - run:
          name: Run Some Python
