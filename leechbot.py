@@ -98,4 +98,22 @@ mutation AddPullRequestComment {
 
 # Execute the mutation, get the payload and print it
 add_comment_data = run_query(add_comment_mutation) 
-print("Added a comment. Here is the payload: " + json.dumps(add_comment_data, indent=2))
+# print("Added a comment. Here is the payload: " + json.dumps(add_comment_data, indent=2))
+
+submit_pr_review_mutation = """
+mutation submitPullRequestReview {
+  addPullRequestReview(input: {
+    event: %s, 
+    pullRequestId: "%s"}
+  ) {
+    pullRequestReview {
+      id
+    }
+  }
+}
+""" % ("REQUEST_CHANGES", pull_request_id)
+
+submit_pr_data = run_query(submit_pr_review_mutation) 
+print("Submitted PR. Here is the payload: " + json.dumps(submit_pr_data, indent=2))
+
+
