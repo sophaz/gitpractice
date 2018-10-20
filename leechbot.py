@@ -4,8 +4,8 @@ import os
 import json
 
 headers = {
-"Authorization": "Bearer %s" % os.environ['CIRCLE_API_PROJECT_TOKEN'], 
-"User-Agent": "sophaz"
+"Authorization": "Bearer %s" % os.environ['LEECHBOT_TOKEN'], 
+"User-Agent": "allenmiao"
 }
 
 print('header is ' + headers['Authorization'])
