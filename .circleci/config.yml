@@ -12,14 +12,13 @@ jobs:
 
     steps:
       - checkout
-
       - run:
-          name: Install dependencies
+          name: Install Python deps in a venv
           command: |
-            curl https://bootstrap.pypa.io/get-pip.py | python
-            pip install --upgrade setuptools
-            sudo pip install requests
-            sudo pip install os
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install requests
+            pip install os
       
       - run:
          name: Run Some Python
