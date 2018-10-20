@@ -5,6 +5,7 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/gitpractice
     docker:
       - image: circleci/python:3.6.6
 
@@ -29,26 +30,6 @@ jobs:
             - ".venv"
             - "/usr/local/bin"
             - "/usr/local/lib/python3.6/site-packages"
-      
-      - run:
-         name: Run Some Python
-         command: pipenv run "python3 leechbot.py"
-
-      - run:
-          name: Post to Github
-          command: bash post_comment.sh
-
-      - run:
-          name: Update Brew 
-          command: echo "brew update"
-
-      - run:
-          name: Install Swiftlint
-          command: echo "brew install swiftlint"
-
-      - run:
-          name: Run Swiftlint
-          command: echo "swiftlint"
 
 dependencies:
   override:
