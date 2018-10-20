@@ -20,7 +20,7 @@ jobs:
       
       - run:
          name: Run Some Python
-         command: python leechbot.py
+         command: pipenv run "python leechbot.py"
 
       - run:
           name: Post to Github
