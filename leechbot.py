@@ -8,8 +8,6 @@ headers = {
 "User-Agent": "allenmiao"
 }
 
-print('header is ' + headers['Authorization'])
-
 def run_query(query): 
 	request = requests.post('https://api.github.com/graphql', json={'query': query}, headers=headers)
 	if request.status_code == 200:
@@ -102,7 +100,7 @@ add_comment_data = run_query(add_comment_mutation)
 
 submit_pr_review_mutation = """
 mutation submitPullRequestReview {
-  addPullRequestReview(input: {
+  submitPullRequestReview(input: {
     event: %s, 
     pullRequestId: "%s"}
   ) {
