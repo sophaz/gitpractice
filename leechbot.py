@@ -101,17 +101,18 @@ add_comment_data = run_query(add_comment_mutation)
 submit_pr_review_mutation = """
 mutation submitPullRequestReview {
   submitPullRequestReview(input: {
-    event: %s, 
-    pullRequestId: "%s"}
+  	body: "%s"
+    event: REQUEST_CHANGES, 
+    pullRequestReviewId: "%s"}
   ) {
     pullRequestReview {
       id
     }
   }
 }
-""" % ("REQUEST_CHANGES", pull_request_id)
+""" % ("This is a review from python", pull_request_review_id)
 
 submit_pr_data = run_query(submit_pr_review_mutation) 
-print("Submitted PR. Here is the payload: " + json.dumps(submit_pr_data, indent=2))
+print("Submitted PR review. Here is the payload: " + json.dumps(submit_pr_data, indent=2))
 
 
