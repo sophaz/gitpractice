@@ -1,0 +1,1 @@
+fun fact -> eat pepper & meditate 
